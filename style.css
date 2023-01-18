@@ -12,6 +12,7 @@ text-align: right;
 /* menú*/
 nav ul {
 text-align: center;
+position: absolute;
 background-color: #e823fc;
 border: 2px solid Black;
 border-radius: 10px;
@@ -44,3 +45,16 @@ color: #606060;
 nav ul li a:hover{
 text-decoration: underline;
 }	
+
+.logo {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 106px;
+    height: 97px;
+    left: 32px;
+    top: 41px;
+
+    border: 1px solid #000000;
+    border-radius: 49px;
+}
