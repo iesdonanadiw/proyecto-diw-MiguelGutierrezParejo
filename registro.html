@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://kit.fontawesome.com/e907758561.js" crossorigin="anonymous"></script>
+    <title>Registro</title>
+</head>
+<style>
+    body {
+        display: grid;
+        grid-template-areas:
+            "header header header"
+            "article nav nav"
+            "footer footer footer";
+        grid-template-rows: 80px 1fr 70px;
+        grid-template-columns: 1fr 20% 15%;
+        grid-row-gap: 10px;
+        grid-column-gap: 10px;
+        height: 100vh;
+        margin: 0;
+    }
+
+    header,
+    footer,
+    article,
+    nav,
+    div {
+        padding: 1.2em;
+    }
+
+    #pageHeader {
+        grid-area: header;
+    }
+
+    #pageFooter {
+        grid-area: footer;
+    }
+
+    #mainArticle {
+        grid-area: article;
+    }
+
+    #mainNav {
+        grid-area: nav;
+    }
+
+    /* Stack the layout on small devices/viewports. */
+    @media all and (max-width: 575px) {
+        body {
+            grid-template-areas:
+                "header"
+                "article"
+                "nav"
+                "footer";
+            grid-template-rows: 80px 1fr 70px;
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+<body>
+    <header id="pageHeader">Aqui va la cabecera</header>
+    <article id="mainArticle">
+        <label for="">Nombre*</label>
+        <input type="text">
+        <label for="">Apellidos</label>
+        <input type="text" name="" id="">
+    </article>
+    <nav id="mainNav">
+        <img src="/img/vault_boy3.JPG" alt="">
+    </nav>
+    <footer id="pageFooter" align="center">
+        <ul>
+            <li><a href="index.html"><strong>Productos</strong></a></li>
+            <li>Ordenadores</li>
+            <li>Portátiles</li>
+            <li>Tablets</li>
+            <li>Componentes</li>
+            <li>Hogar</li>
+        </ul>
+        <ul>
+            <li><strong>Compañia</strong></li>
+            <li><a href="nosotros.html">Sobre nosotros</a></li>
+            <li>Dónde estamos</li>
+            <li>Preguntas frecuentes</li>
+            <li>Proveedores</li>
+            <li>Contáctenos</li>
+        </ul>
+        <ul>
+            <li><a href="reparacion.html"><strong>Servicion de reparación</strong></a></li>
+            <li>¿Cómo funciona?</li>
+            <li>Nuestros profesionales</li>
+            <li>Guía de reparación</li>
+            <li>Más información</li>
+        </ul>
+        <ul>
+            <li><strong>Información legal</strong></li>
+            <li>Política de privacidad</li>
+            <li>Política de cookies</li>
+            <li>Términos y condiciones</li>
+            <li>Política de empresa</li>
+        </ul>
+        <ul>
+            <li><i class="fa-brands fa-twitter"></i></li>
+            <li><i class="fa-brands fa-instagram"></i></li>
+            <li><i class="fa-brands fa-discord"></i></li>
+            <li><i class="fa-brands fa-youtube"></i></li>
+        </ul>
+    </footer>
+</body>
+</html>

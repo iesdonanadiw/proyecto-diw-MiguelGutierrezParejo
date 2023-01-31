@@ -1,0 +1,114 @@
+body #nav-lateral{
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "nav article article"
+        "footer footer footer";
+    grid-template-rows: 80px 1fr 70px;
+    grid-template-columns: 20% 1fr 15%;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    height: 100vh;
+    margin: 0;
+}
+
+header,
+footer,
+article,
+nav,
+div {
+    padding: 1.2em;
+}
+
+#pageHeader {
+    grid-area: header;
+}
+
+#pageFooter {
+    grid-area: footer;
+}
+
+#mainArticle {
+    grid-area: article;
+}
+
+#mainNav {
+    grid-area: nav;
+}
+
+/* Stack the layout on small devices/viewports. */
+@media all and (max-width: 575px) {
+    body {
+        grid-template-areas:
+            "header"
+            "nav"
+            "article"
+            "footer";
+        grid-template-rows: 80px 1fr 70px 1fr 70px;
+        grid-template-columns: 1fr;
+    }
+}
+
+ul.cabecera{
+    list-style-type: none;
+    background-color: #a72df0;
+    border: 2px solid Black;
+    border-radius: 10px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 16px;
+    color: #fff;
+    font-size: 2em;
+    text-decoration-line: underline;
+}
+
+ul li.cabecera {
+    display: inline;
+    padding-right: 8px;
+    padding-left: 8px;
+}
+
+footer{
+    background-color: #fd00e8a4;
+    color: #fff;
+}
+
+footer ul{
+    list-style-type: none;
+    display: inline-block;
+}
+
+footer ul a{
+    color: #fff;
+}
+
+.logo {
+    box-sizing: border-box;
+
+    position: relative;
+    display: inline-block;
+    width: 90px;
+    height: 80px;
+    left: 32px;
+    top: 41px;
+
+    border: 1px solid #000000;
+    border-radius: 49px;
+}
+
+.filtros {
+    display: block;
+}
+
+.tienda{
+    height: 203px;
+    width: 445px;
+    left: 1067px;
+    top: 673px;
+    border-radius: 0px;
+}
+
+h1#morado {
+    color:#A72DF0 ;
+    font-size: 3em;
+}

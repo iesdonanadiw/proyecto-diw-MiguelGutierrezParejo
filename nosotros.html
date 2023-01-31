@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://kit.fontawesome.com/e907758561.js" crossorigin="anonymous"></script>
+    <title>Sobre nosotros</title>
+</head>
+<style>
+    body #nav-lateral{
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "article article article"
+        "footer footer footer";
+    grid-template-rows: 80px 1fr 70px;
+    grid-template-columns: 20% 1fr 15%;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    height: 100vh;
+    margin: 0;
+}
+
+header,
+footer,
+article,
+nav,
+div {
+    padding: 1.2em;
+}
+
+#pageHeader {
+    grid-area: header;
+}
+
+#pageFooter {
+    grid-area: footer;
+}
+
+#mainArticle {
+    grid-area: article;
+}
+
+/* Stack the layout on small devices/viewports. */
+@media all and (max-width: 575px) {
+    body {
+        grid-template-areas:
+            "header"
+            "article"
+            "footer";
+        grid-template-rows: 80px 1fr 70px 1fr 70px;
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+<body>
+    <header id="pageHeader">
+        Aqui va la cabecera
+    </header>
+    <article>
+        <h1 id="morado">Conócenos</h1>
+        <h2>Mondongo components, la tienda experta en informática y tecnología de confianza</h2>
+        <p>
+            Desde el 1994, Mondongo components no ha parado de crecer.
+            A lo largo de estos 28 años de experiencia, nos hemos posicionado como una de las marcas de referencia en el mundo de la informática,
+            la tecnología y la electrónica de consumo a nivel nacional. Actualmente disponemos de más de 120 puntos de venta físicos,
+             y tenemos una tienda online recién renovada para ofrecer la mejor experiencia a nuestros usuarios
+        </p>
+        <p>
+            ¿Te interesa saber más sobre nosotros? Aquí tienes algunas de las ventajas que ofrecemos:
+        </p><br><br>
+        <table align="center">
+            <thead>
+                <th>Mondongo Components es tu tienda de informática porque...</th>
+                <th>Nuestro personal nunca os defrauda</th>
+                <th>El mejor servicio de reparación</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img class="tienda" src="/img/tienda.jpg" alt=""></td>
+                    <td><img class="tienda" src="/img/tienda2.jpg" alt=""></td>
+                    <td><img class="tienda" src="/img/tienda5.jpg" alt=""></td>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Porque sabemos de ordenadores y porque sabemos de tecnología.</li>
+                            <li>Porque damos la mejor información sobre cada producto.</li>
+                            <li>Porque nuestro catálogo de productos va a la última.</li>
+                            <li>Porque podéis probar vuestra compra en nuestros Boxes de automontaje.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Contamos con los mejores profesionales del sector.</li>
+                            <li>Atención personalizada online 24/7 durante todos los días del año.</li>
+                            <li>Trato agradable y cercano, para que te sientas como en casa.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Servicio de diagnóstico y guía de reparación gratuita.</li>
+                            <li>Estimación del tiempo de reparación y gastos sin compromisos.</li>
+                            <li>Tarifa plana en reparación de móviles.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table><br><br><br>
+    </article>
+    <footer id="pageFooter" align="center">
+        <ul>
+            <li><a href="index.html"><strong>Productos</strong></a></li>
+            <li>Ordenadores</li>
+            <li>Portátiles</li>
+            <li>Tablets</li>
+            <li>Componentes</li>
+            <li>Hogar</li>
+        </ul>
+        <ul>
+            <li><strong>Compañia</strong></li>
+            <li><a href="nosotros.html">Sobre nosotros</a></li>
+            <li>Dónde estamos</li>
+            <li>Preguntas frecuentes</li>
+            <li>Proveedores</li>
+            <li>Contáctenos</li>
+        </ul>
+        <ul>
+            <li><a href="reparacion.html"><strong>Servicion de reparación</strong></a></li>
+            <li>¿Cómo funciona?</li>
+            <li>Nuestros profesionales</li>
+            <li>Guía de reparación</li>
+            <li>Más información</li>
+        </ul>
+        <ul>
+            <li><strong>Información legal</strong></li>
+            <li>Política de privacidad</li>
+            <li>Política de cookies</li>
+            <li>Términos y condiciones</li>
+            <li>Política de empresa</li>
+        </ul>
+        <ul>
+            <li><i class="fa-brands fa-twitter"></i></li>
+            <li><i class="fa-brands fa-instagram"></i></li>
+            <li><i class="fa-brands fa-discord"></i></li>
+            <li><i class="fa-brands fa-youtube"></i></li>
+        </ul>
+    </footer>
+</body>
+</html>
