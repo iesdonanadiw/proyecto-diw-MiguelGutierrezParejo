@@ -8,9 +8,61 @@
     <script src="https://kit.fontawesome.com/e907758561.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
+<style>
+    body #nav-lateral{
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "nav article article"
+        "footer footer footer";
+    grid-template-rows: 80px 1fr 70px;
+    grid-template-columns: 20% 1fr 15%;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    height: 100vh;
+    margin: 0;
+}
+
+header,
+footer,
+article,
+nav,
+div {
+    padding: 1.2em;
+}
+
+#pageHeader {
+    grid-area: header;
+}
+
+#pageFooter {
+    grid-area: footer;
+}
+
+#mainArticle {
+    grid-area: article;
+}
+
+#mainNav {
+    grid-area: nav;
+}
+
+/* Stack the layout on small devices/viewports. */
+@media all and (max-width: 575px) {
+    body {
+        grid-template-areas:
+            "header"
+            "nav"
+            "article"
+            "footer";
+        grid-template-rows: 80px 1fr 70px 1fr 70px;
+        grid-template-columns: 1fr;
+    }
+}
+</style>
 <body id="nav-lateral">
     <header id="pageHeader">
-        <ul class="cabecera" align="center">
+        <ul class="cabecera">
             <li class="cabecera">Componentes</li>
             <li class="cabecera">Ordenadores</li>
             <li class="cabecera">Portátiles</li>
@@ -58,7 +110,7 @@
             <option value="">Solo disponible online</option>
         </select>
     </nav>
-    <footer id="pageFooter" align="center">
+    <footer id="pageFooter">
         <ul>
             <li><a href="index.html"><strong>Productos</strong></a></li>
             <li>Ordenadores</li>

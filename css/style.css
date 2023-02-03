@@ -1,54 +1,3 @@
-body #nav-lateral{
-    display: grid;
-    grid-template-areas:
-        "header header header"
-        "nav article article"
-        "footer footer footer";
-    grid-template-rows: 80px 1fr 70px;
-    grid-template-columns: 20% 1fr 15%;
-    grid-row-gap: 10px;
-    grid-column-gap: 10px;
-    height: 100vh;
-    margin: 0;
-}
-
-header,
-footer,
-article,
-nav,
-div {
-    padding: 1.2em;
-}
-
-#pageHeader {
-    grid-area: header;
-}
-
-#pageFooter {
-    grid-area: footer;
-}
-
-#mainArticle {
-    grid-area: article;
-}
-
-#mainNav {
-    grid-area: nav;
-}
-
-/* Stack the layout on small devices/viewports. */
-@media all and (max-width: 575px) {
-    body {
-        grid-template-areas:
-            "header"
-            "nav"
-            "article"
-            "footer";
-        grid-template-rows: 80px 1fr 70px 1fr 70px;
-        grid-template-columns: 1fr;
-    }
-}
-
 ul.cabecera{
     list-style-type: none;
     background-color: #a72df0;
@@ -139,7 +88,7 @@ body {
     width: 400px;
     border-radius: 8px;
     padding: 20px 30px;
-    box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 .title {
@@ -190,7 +139,7 @@ body {
     margin-left: auto;
     padding: 15px 30px;
     border: none;
-    background-color: #fd00e8a4;
+    background-color: #A72DF0;
     color: white;
     border-radius: 6px;
     cursor: pointer;
@@ -199,7 +148,7 @@ body {
 }
 
 .submitBtn:hover {
-    background-color: #fd00e83d;
+    background-color: #d58cff;
     transform: translateY(-2px);
 }
 
@@ -209,11 +158,11 @@ body {
     z-index: 10;
     font-size: 14px;
     font-weight: 600;
-    color: #fd00e8a4;
+    color: #A72DF0;
 }
 
 .input:focus {
-    border: 2px solid #fd00e8a4;
+    border: 2px solid #A72DF0;
 }
 
 .input:not(:placeholder-shown)+.label {

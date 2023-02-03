@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portátiles</title>
+</head>
+<style>
+    body #nav-lateral{
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "nav article article"
+        "footer footer footer";
+    grid-template-rows: 80px 1fr 70px;
+    grid-template-columns: 20% 1fr 15%;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    height: 100vh;
+    margin: 0;
+}
+
+header,
+footer,
+article,
+nav,
+div {
+    padding: 1.2em;
+}
+
+#pageHeader {
+    grid-area: header;
+}
+
+#pageFooter {
+    grid-area: footer;
+}
+
+#mainArticle {
+    grid-area: article;
+}
+
+#mainNav {
+    grid-area: nav;
+}
+
+/* Stack the layout on small devices/viewports. */
+@media all and (max-width: 575px) {
+    body {
+        grid-template-areas:
+            "header"
+            "nav"
+            "article"
+            "footer";
+        grid-template-rows: 80px 1fr 70px 1fr 70px;
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+<body>
+    <ul class="cabecera" align="center">
+        <li class="cabecera">Componentes</li>
+        <li class="cabecera">Ordenadores</li>
+        <li class="cabecera">Portátiles</li>
+        <li class="cabecera">Sobre nosotros</li>
+        <li class="cabecera">Reparación</li>
+    </ul>
+</header>
+<article id="mainArticle">
+    <p></p>
+</article>
+<nav id="mainNav">
+    <select name="" id="" class="filtros">
+        <option value="" disabled selected hidden>Tipo de producto</option>
+        <option value="">Portatil</option>
+        <option value="">Movil</option>
+        <option value="">Tablet</option>
+    </select><br>
+    <select name="" id="" class="filtros">
+        <option value="" disabled selected hidden>Marca</option>
+        <option value="">Asus</option>
+        <option value="">Aorus</option>
+        <option value="">Gigabyte</option>
+    </select><br>
+    <select name="" id="" class="filtros">
+        <option value="" disabled selected hidden>Precio</option>
+        <option value="">Más baratos primero</option>
+        <option value="">Más caros primero</option>
+    </select><br>
+    <select name="" id="" class="filtros">
+        <option value="" disabled selected hidden>Más vendido</option>
+        <option value="">Más vendido semanal</option>
+        <option value="">Más vendido mensual</option>
+        <option value="">Más vendido anual</option>
+    </select><br>
+    <select name="" id="" class="filtros">
+        <option value="" disabled selected hidden>Mejor valorado</option>
+        <option value="">Mejor valorado semanal</option>
+        <option value="">Mejor valorado mensual</option>
+        <option value="">Mejor valorado anual</option>
+    </select><br>
+    <select name="" id="" class="filtros">
+        <option value="" disabled selected hidden>Últimas ofertas</option>
+        <option value="">Ofertas de enero</option>
+        <option value="">Poco stock</option>
+        <option value="">Solo disponible online</option>
+    </select>
+</nav>
+<footer id="pageFooter">
+    <ul>
+        <li><a href="index.html"><strong>Productos</strong></a></li>
+        <li>Ordenadores</li>
+        <li>Portátiles</li>
+        <li>Tablets</li>
+        <li>Componentes</li>
+        <li>Hogar</li>
+    </ul>
+    <ul>
+        <li><strong>Compañia</strong></li>
+        <li><a href="nosotros.html">Sobre nosotros</a></li>
+        <li>Dónde estamos</li>
+        <li>Preguntas frecuentes</li>
+        <li>Proveedores</li>
+        <li>Contáctenos</li>
+    </ul>
+    <ul>
+        <li><a href="reparacion.html"><strong>Servicion de reparación</strong></a></li>
+        <li>¿Cómo funciona?</li>
+        <li>Nuestros profesionales</li>
+        <li>Guía de reparación</li>
+        <li>Más información</li>
+    </ul>
+    <ul>
+        <li><strong>Información legal</strong></li>
+        <li>Política de privacidad</li>
+        <li>Política de cookies</li>
+        <li>Términos y condiciones</li>
+        <li>Política de empresa</li>
+    </ul>
+    <ul>
+        <li><i class="fa-brands fa-twitter"></i></li>
+        <li><i class="fa-brands fa-instagram"></i></li>
+        <li><i class="fa-brands fa-discord"></i></li>
+        <li><i class="fa-brands fa-youtube"></i></li>
+    </ul>
+</footer>
+</body>
+</html>
