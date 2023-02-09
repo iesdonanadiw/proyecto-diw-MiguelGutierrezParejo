@@ -1,149 +1,220 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portátiles</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/e907758561.js" crossorigin="anonymous"></script>
+    <title>Categoria</title>
 </head>
 <style>
-    body #nav-lateral{
-    display: grid;
-    grid-template-areas:
-        "header header header"
-        "nav article article"
-        "footer footer footer";
-    grid-template-rows: 80px 1fr 70px;
-    grid-template-columns: 20% 1fr 15%;
-    grid-row-gap: 10px;
-    grid-column-gap: 10px;
-    height: 100vh;
-    margin: 0;
-}
-
-header,
-footer,
-article,
-nav,
-div {
-    padding: 1.2em;
-}
-
-#pageHeader {
-    grid-area: header;
-}
-
-#pageFooter {
-    grid-area: footer;
-}
-
-#mainArticle {
-    grid-area: article;
-}
-
-#mainNav {
-    grid-area: nav;
-}
-
-/* Stack the layout on small devices/viewports. */
-@media all and (max-width: 575px) {
-    body {
+    .container {
+        display: grid;
+        grid-template-columns: 10% 90%;
+        grid-template-rows: 8% 15% 80% 13%;
+        grid-auto-columns: 1fr;
+        grid-auto-rows: 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
         grid-template-areas:
-            "header"
-            "nav"
-            "article"
-            "footer";
-        grid-template-rows: 80px 1fr 70px 1fr 70px;
-        grid-template-columns: 1fr;
+            "Cabecera Cabecera"
+            "titulo   titulo"
+            "Barra-lateral productos"
+            "pie-de-pagina pie-de-pagina";
     }
-}
+
+    .Cabecera {
+        grid-area: Cabecera;
+    }
+
+    .Barra-lateral {
+        grid-area: Barra-lateral;
+        margin-left: 15%;
+        margin-top: 30%;
+    }
+
+    .titulo {
+        grid-area: titulo;
+        align-items: center;
+        font-size: 3em;
+    }
+
+    .pie-de-pagina {
+        grid-area: pie-de-pagina;
+    }
+
+    .productos {
+        grid-area: productos;
+        display: grid;
+        grid-template-columns: 25% 25% 25%;
+        grid-auto-rows: 1fr;
+        grid-gap: 1rem;
+        justify-content: center;
+    }
 </style>
 <body>
-    <ul class="cabecera" align="center">
-        <li class="cabecera">Componentes</li>
-        <li class="cabecera">Ordenadores</li>
-        <li class="cabecera">Portátiles</li>
-        <li class="cabecera">Sobre nosotros</li>
-        <li class="cabecera">Reparación</li>
-    </ul>
-</header>
-<article id="mainArticle">
-    <p></p>
-</article>
-<nav id="mainNav">
-    <select name="" id="" class="filtros">
-        <option value="" disabled selected hidden>Tipo de producto</option>
-        <option value="">Portatil</option>
-        <option value="">Movil</option>
-        <option value="">Tablet</option>
-    </select><br>
-    <select name="" id="" class="filtros">
-        <option value="" disabled selected hidden>Marca</option>
-        <option value="">Asus</option>
-        <option value="">Aorus</option>
-        <option value="">Gigabyte</option>
-    </select><br>
-    <select name="" id="" class="filtros">
-        <option value="" disabled selected hidden>Precio</option>
-        <option value="">Más baratos primero</option>
-        <option value="">Más caros primero</option>
-    </select><br>
-    <select name="" id="" class="filtros">
-        <option value="" disabled selected hidden>Más vendido</option>
-        <option value="">Más vendido semanal</option>
-        <option value="">Más vendido mensual</option>
-        <option value="">Más vendido anual</option>
-    </select><br>
-    <select name="" id="" class="filtros">
-        <option value="" disabled selected hidden>Mejor valorado</option>
-        <option value="">Mejor valorado semanal</option>
-        <option value="">Mejor valorado mensual</option>
-        <option value="">Mejor valorado anual</option>
-    </select><br>
-    <select name="" id="" class="filtros">
-        <option value="" disabled selected hidden>Últimas ofertas</option>
-        <option value="">Ofertas de enero</option>
-        <option value="">Poco stock</option>
-        <option value="">Solo disponible online</option>
-    </select>
-</nav>
-<footer id="pageFooter">
-    <ul>
-        <li><a href="index.html"><strong>Productos</strong></a></li>
-        <li>Ordenadores</li>
-        <li>Portátiles</li>
-        <li>Tablets</li>
-        <li>Componentes</li>
-        <li>Hogar</li>
-    </ul>
-    <ul>
-        <li><strong>Compañia</strong></li>
-        <li><a href="nosotros.html">Sobre nosotros</a></li>
-        <li>Dónde estamos</li>
-        <li>Preguntas frecuentes</li>
-        <li>Proveedores</li>
-        <li>Contáctenos</li>
-    </ul>
-    <ul>
-        <li><a href="reparacion.html"><strong>Servicion de reparación</strong></a></li>
-        <li>¿Cómo funciona?</li>
-        <li>Nuestros profesionales</li>
-        <li>Guía de reparación</li>
-        <li>Más información</li>
-    </ul>
-    <ul>
-        <li><strong>Información legal</strong></li>
-        <li>Política de privacidad</li>
-        <li>Política de cookies</li>
-        <li>Términos y condiciones</li>
-        <li>Política de empresa</li>
-    </ul>
-    <ul>
-        <li><i class="fa-brands fa-twitter"></i></li>
-        <li><i class="fa-brands fa-instagram"></i></li>
-        <li><i class="fa-brands fa-discord"></i></li>
-        <li><i class="fa-brands fa-youtube"></i></li>
-    </ul>
-</footer>
+    <div class="container">
+        <div class="Cabecera">
+            <a href="index.html"><img src="/img/logo.jpg" alt="" class="logo"></a>
+            <ul class="cabecera">
+                <li class="cabecera"><a href="categoria.html">Componentes</a></li>
+                <li class="cabecera"><a href="categoria.html">Ordenadores</a></li>
+                <li class="cabecera"><a href="categoria.html">Portátiles</a></li>
+                <li class="cabecera">Sobre nosotros</li>
+                <li class="cabecera">Reparación</li>
+            </ul>
+            <img src="/img/carrito.png" alt="" class="logo">
+            <img src="/img/user.png" alt="" class="logo">
+        </div>
+        <div class="titulo" align="center">
+            <h4 id="morado">Categoria seleccionada: Portátiles</h4>
+        </div>
+        <div class="Barra-lateral">
+            <h3>Filtrar por...</h3>
+            <select name="" id="" class="filtros">
+                <option value="" disabled selected hidden>Marca</option>
+                <option value="">Asus</option>
+                <option value="">Aorus</option>
+                <option value="">Gigabyte</option>
+            </select><br>
+            <select name="" id="" class="filtros">
+                <option value="" disabled selected hidden>Precio</option>
+                <option value="">Más baratos primero</option>
+                <option value="">Más caros primero</option>
+            </select><br>
+            <select name="" id="" class="filtros">
+                <option value="" disabled selected hidden>Más vendido</option>
+                <option value="">Más vendido semanal</option>
+                <option value="">Más vendido mensual</option>
+                <option value="">Más vendido anual</option>
+            </select><br>
+            <select name="" id="" class="filtros">
+                <option value="" disabled selected hidden>Mejor valorado</option>
+                <option value="">Mejor valorado semanal</option>
+                <option value="">Mejor valorado mensual</option>
+                <option value="">Mejor valorado anual</option>
+            </select><br>
+            <select name="" id="" class="filtros">
+                <option value="" disabled selected hidden>Últimas ofertas</option>
+                <option value="">Ofertas de enero</option>
+                <option value="">Poco stock</option>
+                <option value="">Solo disponible online</option>
+            </select>
+        </div>
+        <div class="productos">
+            <article>
+                <img src="/img/portatil.jpg" alt="" class="producto">
+                <p>Asus-ROG RTX 2050 i7 9700X799.99€</p>
+                <p>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <button>Comprar</button>
+                </p>
+            </article>
+            <article>
+                <img src="/img/portatil2.png" alt="" class="producto">
+                <p>MSI GTX 3060 1TB SSD 749.99€</p>
+                <p>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <button>Comprar</button>
+                </p>
+            </article>
+            <article>
+                <img src="/img/portatil3.png" alt="" class="producto">
+                <p>MSI RTX 2070 512GB + 16GB 649.99€</p>
+                <p>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <button>Comprar</button>
+                </p>
+            </article>
+            <article>
+                <img src="/img/portatil4.jpg" alt="" class="producto">
+                <p>Asus-TUF GTX 1080ti i7 8700F 549.99€</p>
+                <p>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <button>Comprar</button>
+                </p>
+            </article>
+            <article>
+                <img src="/img/asus-rog.jpg" alt="" class="producto">
+                <p>Portatil Asus-ROG RTX 2050 799.99€</p>
+                <p>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <button>Comprar</button>
+                </p>
+            </article>
+            <article>
+                <img src="/img/portatil6.jpg" alt="" class="producto">
+                <p>Acer GTX 1650 i5 5500F 449.99€</p>
+                <p>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <button>Comprar</button>
+                </p>
+            </article>
+        </div>
+        <footer class="pie-de-pagina"  align="center">
+            <ul>
+                <li><a href="index.html"><strong>Productos</strong></a></li>
+                <li>Ordenadores</li>
+                <li>Portátiles</li>
+                <li>Tablets</li>
+                <li>Componentes</li>
+                <li>Hogar</li>
+            </ul>
+            <ul>
+                <li><strong><a href="nosotros.html">Sobre nosotros</a></strong></li>
+                <li>Compañia</li>
+                <li>Dónde estamos</li>
+                <li>Preguntas frecuentes</li>
+                <li>Proveedores</li>
+                <li>Contáctenos</li>
+            </ul>
+            <ul>
+                <li><a href="reparacion.html"><strong>Servicion de reparación</strong></a></li>
+                <li>¿Cómo funciona?</li>
+                <li>Nuestros profesionales</li>
+                <li>Guía de reparación</li>
+                <li>Más información</li>
+            </ul>
+            <ul>
+                <li><strong>Información legal</strong></li>
+                <li>Política de privacidad</li>
+                <li>Política de cookies</li>
+                <li>Términos y condiciones</li>
+                <li>Política de empresa</li>
+            </ul>
+            <ul>
+                <li><i class="fa-brands fa-twitter"></i></li>
+                <li><i class="fa-brands fa-instagram"></i></li>
+                <li><i class="fa-brands fa-discord"></i></li>
+                <li><i class="fa-brands fa-youtube"></i></li>
+            </ul>
+        </footer>
+    </div>
 </body>
 </html>

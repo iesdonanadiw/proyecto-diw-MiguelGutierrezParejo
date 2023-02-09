@@ -1,3 +1,4 @@
+/*Estilo de la cabecera*/
 ul.cabecera{
     list-style-type: none;
     background-color: #a72df0;
@@ -17,6 +18,10 @@ ul li.cabecera {
     padding-left: 8px;
 }
 
+ul li a{
+    color: #fff;
+}
+/*Estilo del pie de pagina*/
 footer{
     background-color: #fd00e8a4;
     color: #fff;
@@ -31,6 +36,7 @@ footer ul a{
     color: #fff;
 }
 
+/*Estilo del logo*/
 .logo {
     box-sizing: border-box;
 
@@ -45,10 +51,13 @@ footer ul a{
     border-radius: 49px;
 }
 
+/*Estilo de los filtros de index.html y de categoria.html*/
 .filtros {
     display: block;
+    border-radius: 5%;
 }
 
+/*Imagenes de las tiendas para el nosotros.html*/
 .tienda{
     height: 203px;
     width: 445px;
@@ -57,10 +66,7 @@ footer ul a{
     border-radius: 0px;
 }
 
-.titulo {
-    font-size: 3em;
-}
-
+/*Por si hay que poner algo morado*/
 #morado {
     color:#A72DF0 ;
 }
@@ -76,6 +82,7 @@ body {
   font-family: "lato", sans-serif;
 }
 
+/*Formulario para el registro y el login*/
 .signupFrm {
     display: flex;
     justify-content: center;
@@ -172,3 +179,19 @@ body {
     font-size: 14px;
     font-weight: 600;
 }
+
+/*Imágenes de index.html y categoria.html*/
+.producto {
+    height: 200px;
+    width: 300px;
+}
+
+.reloj {
+    height: 200px;
+    width: 130px;
+}
+
+/*El color para las estrellas de las valoraciones*/
+.checked {
+    color: orange;
+  }
