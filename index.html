@@ -5,63 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/index-categoria.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/e907758561.js" crossorigin="anonymous"></script>
     <title>Index</title>
 </head>
-<style>
-    .container {
-        display: grid;
-        grid-template-columns: 10% 90%;
-        grid-template-rows: 20% 85% 17%;
-        grid-auto-columns: 1fr;
-        grid-auto-rows: 1fr;
-        gap: 0px 0px;
-        grid-auto-flow: row;
-        grid-template-areas:
-            "Cabecera Cabecera"
-            "Barra-lateral productos"
-            "pie-de-pagina pie-de-pagina";
-    }
-
-    .Cabecera {
-        grid-area: Cabecera;
-    }
-
-    .Barra-lateral {
-        grid-area: Barra-lateral;
-        margin-left: 15%;
-        margin-top: 30%;
-    }
-
-    .pie-de-pagina {
-        grid-area: pie-de-pagina;
-    }
-
-    .productos {
-        grid-area: productos;
-        display: grid;
-        grid-template-columns: 25% 25% 25%;
-        grid-auto-rows: 1fr;
-        grid-gap: 1rem;
-        justify-content: center;
-    }
-</style>
 <body>
     <div class="container">
-        <div class="Cabecera"> <!-- 4 de febrero: hacer el header bien -->
-            <a href="index.html"><img src="/img/logo.jpg" alt="" class="logo"></a>
-            <ul class="cabecera">
-                <li class="cabecera"><a href="categoria.html">Componentes</a></li>
-                <li class="cabecera"><a href="categoria.html">Ordenadores</a></li>
-                <li class="cabecera"><a href="categoria.html">Portátiles</a></li>
-                <li class="cabecera">Sobre nosotros</li>
-                <li class="cabecera">Reparación</li>
-            </ul>
-            <img src="/img/carrito.png" alt="" class="logo">
-            <img src="/img/user.png" alt="" class="logo">
-        </div>
-        <div class="Barra-lateral">
+        <header class="cabecera">
+            <div>
+                <a href="index.html"><img src="/img/logo.jpg" alt="" class="logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="categoria.html">Componentes</a></li>
+                    <li><a href="categoria.html">Ordenadores</a></li>
+                    <li><a href="categoria.html">Portátiles</a></li>
+                    <li><a href="reparacion.html">Reparación</a></li>
+                    <li><a href="nosotros.html">Sobre nosotros</a></li>
+                </ul>
+                <button class="menu-toggle">&#9776;</button>
+            </nav>
+            <div>
+                <a href="registro.html"><img src="/img/user.png" alt="" class="user-carrito"></a>
+                <a href="carrito.html"><img src="/img/carrito.png" alt="" class="user-carrito"></a>
+            </div>
+        </header>
+        <div class="barra-lateral">
             <h3>Filtrar por...</h3>
             <select name="" id="" class="filtros">
                 <option value="" disabled selected hidden>Tipo de producto</option>
@@ -100,116 +70,121 @@
             </select>
         </div>
         <div class="productos">
-            <article>
+            <div>
                 <img src="/img/airfrier.png" alt="" class="producto">
                 <p>Airfrier Uten 6.5L 149.99€</p>
-                <p>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                    <span class="fa fa-star"></span>
-                    <button>Comprar</button>
-                </p>
-            </article>
-            <article>
+                <div class="opciones">
+                    <div>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div>
+                        <input type="image" src="/img/carrito.png" alt="" class="btnComprar">
+                    </div>
+                </div>
+            </div>
+            <div>
                 <img src="/img/ordenador.jpg" alt="" class="producto">
                 <p>Ordenador Asus-ROG GTX 1080ti 549.99€</p>
-                <p>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                    <button>Comprar</button>
-                </p>
-            </article>
-            <article>
+                <div class="opciones">
+                    <div>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div>
+                        <input type="image" src="/img/carrito.png" alt="" class="btnComprar">
+                    </div>
+                </div>
+            </div>
+            <div>
                 <img src="/img/smartwatch.jpg" alt="" class="reloj">
                 <p>RealmeWatch 5 99.99€</p>
-                <p>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                    <span class="fa fa-star"></span>
-                    <span class="fa fa-star"></span>
-                    <button>Comprar</button>
-                </p>
-            </article>
-            <article>
+                <div class="opciones">
+                    <div>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div>
+                        <input type="image" src="/img/carrito.png" alt="" class="btnComprar">
+                    </div>
+                </div>
+            </div>
+            <div>
                 <img src="/img/ps5.jpg" alt="" class="producto">
                 <p>Ps5 + mando 749.99€</p>
-                <p>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                    <button>Comprar</button>
-                </p>
-            </article>
-            <article>
+                <div class="opciones">
+                    <div>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div>
+                        <input type="image" src="/img/carrito.png" alt="" class="btnComprar">
+                    </div>
+                </div>
+            </div>
+            <div>
                 <img src="/img/asus-rog.jpg" alt="" class="producto">
                 <p>Portatil Asus-ROG RTX 2050 799.99€</p>
-                <p>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                    <button>Comprar</button>
-                </p>
-            </article>
-            <article>
+                <div class="opciones">
+                    <div>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div>
+                        <input type="image" src="/img/carrito.png" alt="" class="btnComprar">
+                    </div>
+                </div>
+            </div>
+            <div>
                 <img src="/img/tablet.jpg" alt="" class="producto">
                 <p>LenovoPad 128GB + 8GB 249.99€</p>
-                <p>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                    <span class="fa fa-star"></span>
-                    <span class="fa fa-star"></span>
-                    <span class="fa fa-star"></span>
-                    <button>Comprar</button>
-                </p>
-            </article>
+                <div class="opciones">
+                    <div>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div>
+                        <input type="image" src="/img/carrito.png" alt="" class="btnComprar">
+                    </div>
+                </div>
+            </div>
         </div>
-        <footer class="pie-de-pagina"  align="center">
-            <ul>
-                <li><a href="index.html"><strong>Productos</strong></a></li>
-                <li>Ordenadores</li>
-                <li>Portátiles</li>
-                <li>Tablets</li>
-                <li>Componentes</li>
-                <li>Hogar</li>
-            </ul>
-            <ul>
-                <li><strong><a href="nosotros.html">Sobre nosotros</a></strong></li>
-                <li>Compañia</li>
-                <li>Dónde estamos</li>
-                <li>Preguntas frecuentes</li>
-                <li>Proveedores</li>
-                <li>Contáctenos</li>
-            </ul>
-            <ul>
-                <li><a href="reparacion.html"><strong>Servicion de reparación</strong></a></li>
-                <li>¿Cómo funciona?</li>
-                <li>Nuestros profesionales</li>
-                <li>Guía de reparación</li>
-                <li>Más información</li>
-            </ul>
-            <ul>
-                <li><strong>Información legal</strong></li>
-                <li>Política de privacidad</li>
-                <li>Política de cookies</li>
-                <li>Términos y condiciones</li>
-                <li>Política de empresa</li>
-            </ul>
-            <ul>
-                <li><i class="fa-brands fa-twitter"></i></li>
-                <li><i class="fa-brands fa-instagram"></i></li>
-                <li><i class="fa-brands fa-discord"></i></li>
-                <li><i class="fa-brands fa-youtube"></i></li>
-            </ul>
+        <footer class="pie-de-pagina">
+            <div class="principal-pie">
+                <div class="columna">
+                  <h3>Contacto</h3>
+                  <ul>
+                      <li>Teléfono: 666 54 78 17</li>
+                      <li>Correo: mondongo.components@gmail.com</li>
+                  </ul>
+                </div>
+              <div class="columna">
+                <ul>
+                    <li><i class="fa-brands fa-twitter"></i></li>
+                    <li><i class="fa-brands fa-instagram"></i></li>
+                    <li><i class="fa-brands fa-discord"></i></li>
+                    <li><i class="fa-brands fa-youtube"></i></li>
+                </ul>
+              </div>
+            </div>
         </footer>
     </div>
 </body>

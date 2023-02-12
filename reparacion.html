@@ -5,144 +5,94 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/e907758561.js" crossorigin="anonymous"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/reparacion.css">
     <title>Reparacion</title>
 </head>
-<style>
-.container {
-    display: grid;
-    grid-template-columns: 0.9fr 1fr 1.1fr;
-    grid-template-rows: 0.6fr 2.1fr 0.7fr 0.6fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-        "cabecera cabecera cabecera"
-        "lateral caracteristicas calendario"
-        "precio precio precio"
-        "pie pie pie";
-}
-
-.precio {
-    grid-area: precio;
-}
-
-.pie {
-    grid-area: pie;
-}
-
-.lateral {
-     grid-area: lateral;
-     margin-left: 15px;
-}
-
-.cabecera {
-    grid-area: cabecera;
-}
-
-.calendario {
-     grid-area: calendario;
-}
-
-.caracteristicas {
-    grid-area: caracteristicas;
-}
-
-.img_rep {
-    width: 400px;
-    height: 300px;
-  }
-
-.texto {
-    border: 1px solid black;
-    width: 200px;
-}
-body {
-    font-size: larger;
-}
-</style>
 <body>
     <div class="container">
-        <div class="cabecera">
-            aqui va la cabecera
-        </div>
+        <header class="cabecera">
+            <div>
+                <a href="index.html"><img src="/img/logo.jpg" alt="" class="logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="categoria.html">Componentes</a></li>
+                    <li><a href="categoria.html">Ordenadores</a></li>
+                    <li><a href="categoria.html">Portátiles</a></li>
+                    <li><a href="reparacion.html">Reparación</a></li>
+                    <li><a href="nosotros.html">Sobre nosotros</a></li>
+                </ul>
+                <button class="menu-toggle">&#9776;</button>
+            </nav>
+            <div>
+                <a href="registro.html"><img src="/img/user.png" alt="" class="user-carrito"></a>
+                <a href="carrito.html"><img src="/img/carrito.png" alt="" class="user-carrito"></a>
+            </div>
+        </header>
         <div class="lateral">
-            <img src="/img/reparar_ordenador.jpg" alt="" class="img_rep">
+            <img src="/img/reparar_ordenador.jpg" alt="" class="tamaño_img">
             <div class="texto">
-                Contamos con los mejores técnicos para que la reparación sea segura y satisfactoria. Su ordenador está en buenas manos!!!
+                En Mondongo Components, contamos con los mejores profesionales en reparación de productos tecnológicos del mercado,
+                así que no tema por su móvil y confíe en nosotros. Está en buenas manos!!
             </div>
         </div>
-        <div class="caracteristicas">
-            <select name="" id="">
-                <option value="" disabled selected hidden>¿Qué desea que reparemos?</option>
-                <option value="">Sobremesa</option>
-                <option value="">Portátil</option>
-                <option value="">Tablet</option>
-                <option value="">Otro</option>
-            </select><br><br><br>
-            <select name="" id="">
-                <option value="" disabled selected hidden>¿Cuál es el problema?</option>
-                <option value="">No se enciende</option>
-                <option value="">No carga correctamente</option>
-                <option value="">Hace mucho ruido</option>
-                <option value="">Otro</option>
-            </select><br><br><br>
-            <select name="" id="">
-                <option value="" disabled selected hidden>Seleccione la marca</option>
-                <option value="">Apple</option>
-                <option value="">Asus</option>
-                <option value="">AORUS</option>
-                <option value="">Lenovo</option>
-            </select><br><br><br>
-            <select name="" id="">
-                <option value="" disabled selected hidden>Seleccione el modelo</option>
-                <option value="">Iphone XR</option>
-                <option value="">LenovoPad</option>
-                <option value="">Galaxy S10+</option>
-                <option value="">Mi Band 6</option>
-            </select>
+        <div class="principal">
+            <div class="seleccion">
+                <h1 id="morado">Diagnóstico rápido</h1>
+                <select name="" id="">
+                    <option value="" disabled selected hidden>¿Qué desea que reparemos?</option>
+                    <option value="">Sobremesa</option>
+                    <option value="">Portátil</option>
+                    <option value="">Tablet</option>
+                    <option value="">Otro</option>
+                </select><br><br><br>
+                <select name="" id="">
+                    <option value="" disabled selected hidden>¿Cuál es el problema?</option>
+                    <option value="">No se enciende</option>
+                    <option value="">No carga correctamente</option>
+                    <option value="">Hace mucho ruido</option>
+                    <option value="">Otro</option>
+                </select><br><br><br>
+                <select name="" id="">
+                    <option value="" disabled selected hidden>Seleccione la marca</option>
+                    <option value="">Apple</option>
+                    <option value="">Asus</option>
+                    <option value="">AORUS</option>
+                    <option value="">Lenovo</option>
+                </select><br><br><br>
+                <select name="" id="">
+                    <option value="" disabled selected hidden>Seleccione el modelo</option>
+                    <option value="">Iphone XR</option>
+                    <option value="">LenovoPad</option>
+                    <option value="">Galaxy S10+</option>
+                    <option value="">Mi Band 6</option>
+                </select>
+            </div>
+            <div>
+                <h1 id="morado">Seleccine el dia para que su producto sea recogido</h1>
+                <iframe src="https://calendar.google.com/calendar/embed?src=miguelgutierrezparejo777%40gmail.com&ctz=Europe%2FMadrid" style="border: 0" width="600" height="400" frameborder="0" scrolling="yes"></iframe>
+                <button class="boton">Confirmar recogida</button>
+            </div>
         </div>
-        <div class="calendario">
-
-        </div>
-        <div class="precio"></div>
-        <footer class="pie" align="center">
-            <ul>
-                <li><a href="index.html"><strong>Productos</strong></a></li>
-                <li>Ordenadores</li>
-                <li>Portátiles</li>
-                <li>Tablets</li>
-                <li>Componentes</li>
-                <li>Hogar</li>
-            </ul>
-            <ul>
-                <li><strong><a href="nosotros.html">Sobre nosotros</a></strong></li>
-                <li>Compañia</li>
-                <li>Dónde estamos</li>
-                <li>Preguntas frecuentes</li>
-                <li>Proveedores</li>
-                <li>Contáctenos</li>
-            </ul>
-            <ul>
-                <li><a href="reparacion.html"><strong>Servicion de reparación</strong></a></li>
-                <li>¿Cómo funciona?</li>
-                <li>Nuestros profesionales</li>
-                <li>Guía de reparación</li>
-                <li>Más información</li>
-            </ul>
-            <ul>
-                <li><strong>Información legal</strong></li>
-                <li>Política de privacidad</li>
-                <li>Política de cookies</li>
-                <li>Términos y condiciones</li>
-                <li>Política de empresa</li>
-            </ul>
-            <ul>
-                <li><i class="fa-brands fa-twitter"></i></li>
-                <li><i class="fa-brands fa-instagram"></i></li>
-                <li><i class="fa-brands fa-discord"></i></li>
-                <li><i class="fa-brands fa-youtube"></i></li>
-            </ul>
+        <footer class="pie">
+            <div class="principal-pie">
+                <div class="columna">
+                  <h3>Contacto</h3>
+                  <ul>
+                      <li>Teléfono: 666 54 78 17</li>
+                      <li>Correo: mondongo.components@gmail.com</li>
+                  </ul>
+                </div>
+              <div class="columna">
+                <ul>
+                    <li><i class="fa-brands fa-twitter"></i></li>
+                    <li><i class="fa-brands fa-instagram"></i></li>
+                    <li><i class="fa-brands fa-discord"></i></li>
+                    <li><i class="fa-brands fa-youtube"></i></li>
+                </ul>
+              </div>
+            </div>
         </footer>
     </div>
 </body>
