@@ -56,6 +56,7 @@ nav a:hover {
 .user-carrito {
     width: 70px;
     height: 70px;
+    animation: fade-in 1.5s ease-in-out;
 }
 
 .user-carrito:hover {
@@ -69,6 +70,16 @@ nav a:hover {
     width: 190px;
     height: 180px;
     padding-top: 30px;
+    animation: fade-in 1.5s ease-in-out;
+}
+
+@keyframes fade-in{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .logo:hover {
