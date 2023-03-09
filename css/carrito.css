@@ -52,18 +52,3 @@
     justify-content: flex-end;
     margin-right: 15%;
 }
-
-.btnComprar {
-    padding: 15px 30px;
-    border: none;
-    background-color: #A72DF0;
-    color: white;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.btnComprar:hover {
-    background-color: #d58cff;
-    transform: translateY(-2px);
-}

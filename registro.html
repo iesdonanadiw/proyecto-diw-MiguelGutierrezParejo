@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/registro-login.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/registro-login.css">
     <script src="https://kit.fontawesome.com/e907758561.js" crossorigin="anonymous"></script>
-    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <script src="./js/auxiliar.js" defer></script>
     <title>Registro</title>
 </head>
 <body>
@@ -17,7 +18,9 @@
     <div class="container">
         <header class="cabecera">
             <div>
-                <a href="index.html"><img src="/img/logotipo.svg" alt="" class="logo"></a>
+                <picture>
+                    <a href="index.html"><img src="./img/logotipo.svg" alt="" class="logo"></a>
+                </picture>
             </div>
             <nav>
                 <ul>
@@ -30,14 +33,15 @@
                 <button class="menu-toggle">&#9776;</button>
             </nav>
             <div>
-                <a href="registro.html"><img src="/img/user.png" alt="" class="user-carrito"></a>
-                <a href="carrito.html"><img src="/img/carrito.png" alt="" class="user-carrito"></a>
+                <picture>
+                    <a href="registro.html"><img src="./img/user.png" alt="" class="user-carrito"></a>
+                </picture>
+                <picture>
+                    <a href="carrito.html"><img src="./img/carrito.png" alt="" class="user-carrito"></a>
+                </picture>
             </div>
         </header>
         <div class="principal" id="signupFrm">
-            <video autoplay loop class="fondo">
-                <source src="/videos/video.mp4">
-            </video>
             <form class="form">
                 <h1 class="title">Regístrate</h1>
 
@@ -69,11 +73,14 @@
         <footer class="pie">
             <div class="principal-pie">
                 <div class="columna">
-                    <h3>Contacto</h3>
-                    <ul>
-                        <li>Teléfono: 666 54 78 17</li>
-                        <li>Correo: mondongo.components@gmail.com</li>
-                    </ul>
+                    <button id="mostrar" class="submitBtn">Contacto</button>
+                    <dialog id="dialogo">
+                        <ul>
+                            <li>Teléfono: 666 54 78 17</li>
+                            <li>Correo: mondongo.components@gmail.com</li>
+                            <button class="submitBtn" id="cerrar">Cerrar</button>
+                        </ul>
+                    </dialog>
                 </div>
                 <div class="columna">
                     <ul>

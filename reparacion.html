@@ -5,19 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/e907758561.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/reparacion.css">
-    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/reparacion.css">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <script src="./js/auxiliar.js" defer></script>
     <title>Reparacion</title>
 </head>
 <body>
     <audio autoplay loop>
-        <source src="/audios/bk-sound.mp3" type="audio/mp3">
+        <source src="./audios/bk-sound.mp3" type="audio/mp3">
     </audio>
     <div class="container">
         <header class="cabecera">
             <div>
-                <a href="index.html"><img src="/img/logotipo.svg" alt="" class="logo"></a>
+                <picture>
+                    <a href="index.html"><img src="./img/logotipo.svg" alt="" class="logo"></a>
+                </picture>
             </div>
             <nav>
                 <ul>
@@ -30,17 +33,23 @@
                 <button class="menu-toggle">&#9776;</button>
             </nav>
             <div>
-                <a href="registro.html"><img src="/img/user.png" alt="" class="user-carrito"></a>
-                <a href="carrito.html"><img src="/img/carrito.png" alt="" class="user-carrito"></a>
+                <picture>
+                    <a href="registro.html"><img src="./img/user.png" alt="" class="user-carrito"></a>
+                </picture>
+                <picture>
+                    <a href="carrito.html"><img src="./img/carrito.png" alt="" class="user-carrito"></a>
+                </picture>
             </div>
         </header>
         <div class="lateral">
             <details>
                 <summary>Abre para descubrir la sopresa</summary>
                 <h3>Su ordenador está vivo!!</h3>
-                <img src="/animaciones/logogif.gif" alt="" class="logo">
+                <img src="./animaciones/logogif.gif" alt="" class="logo">
             </details><br><br>
-            <img src="/img/reparar_ordenador.jpg" alt="" class="tamaño_img">
+            <picture>
+                <img src="./img/reparar_ordenador.jpg" alt="" class="tamaño_img">
+            </picture>
             <div class="texto">
                 En Mondongo Components, contamos con los mejores profesionales en reparación de productos tecnológicos del mercado,
                 así que no tema por su móvil y confíe en nosotros. Está en buenas manos!!
@@ -81,17 +90,20 @@
             <div>
                 <h1 class="morado">Seleccine el dia para que su producto sea recogido</h1>
                 <iframe src="https://calendar.google.com/calendar/embed?src=miguelgutierrezparejo777%40gmail.com&ctz=Europe%2FMadrid" style="border: 0" width="600" height="400"></iframe>
-                <button class="boton">Confirmar recogida</button>
+                <button class="submitBtn">Confirmar recogida</button>
             </div>
         </div>
         <footer class="pie">
             <div class="principal-pie">
                 <div class="columna">
-                  <h3>Contacto</h3>
-                  <ul>
-                      <li>Teléfono: 666 54 78 17</li>
-                      <li>Correo: mondongo.components@gmail.com</li>
-                  </ul>
+                    <button id="mostrar" class="submitBtn">Contacto</button>
+                    <dialog id="dialogo">
+                        <ul>
+                            <li>Teléfono: 666 54 78 17</li>
+                            <li>Correo: mondongo.components@gmail.com</li>
+                            <button class="submitBtn" id="cerrar">Cerrar</button>
+                        </ul>
+                    </dialog>
                 </div>
               <div class="columna">
                 <ul>
