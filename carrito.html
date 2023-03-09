@@ -4,16 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/carrito.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="./css/carrito.css">
+    <link rel="stylesheet" href="./css/style.css">
     <script src="https://kit.fontawesome.com/e907758561.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <script src="./js/auxiliar.js" defer></script>
     <title>Carrito</title>
 </head>
 <body>
+    <audio autoplay loop>
+        <source src="./audios/bk-sound.mp3" type="audio/mp3">
+    </audio>
     <div class="container">
         <header class="cabecera">
             <div>
-                <a href="index.html"><img src="/img/logo.jpg" alt="" class="logo"></a>
+                <picture>
+                    <a href="index.html"><img src="./img/logotipo.svg" alt="" class="logo"></a>
+                </picture>
             </div>
             <nav>
                 <ul>
@@ -26,8 +33,12 @@
                 <button class="menu-toggle">&#9776;</button>
             </nav>
             <div>
-                <a href="registro.html"><img src="/img/user.png" alt="" class="user-carrito"></a>
-                <a href="carrito.html"><img src="/img/carrito.png" alt="" class="user-carrito"></a>
+                <picture>
+                    <a href="registro.html"><img src="./img/user.png" alt="" class="user-carrito"></a>
+                </picture>
+                <picture>
+                    <a href="carrito.html"><img src="./img/carrito.png" alt="" class="user-carrito"></a>
+                </picture>
             </div>
         </header>
        <div class="principal">
@@ -36,7 +47,9 @@
                 <div>
                     <input type="checkbox">Añadir
                 </div>
-                <img src="/img/airfrier.png" alt="" class="producto">
+                <picture>
+                    <img src="./img/airfrier.png" alt="" class="producto">
+                </picture>
                 <div class="texto">
                     Freidora sin Aceite 6.5L, Uten Freidora de Aire Caliente con 8 Programas,
                     Pantalla LED Táctil, Air Fryer con Tiempo y Temperatura Ajustable, Receta PDF, Sin BPA, 1800W
@@ -51,7 +64,9 @@
                 <div>
                     <input type="checkbox">Añadir
                 </div>
-                <img src="/img/ps5.jpg" alt="" class="producto">
+                <picture>
+                    <img src="./img/ps5.jpg" alt="" class="producto">
+                </picture>
                 <div class="texto">
                     PS5 Consola Sony Playstation 5 (versión Disco) Incluye Mando Dualsense
                 </div>
@@ -70,17 +85,20 @@
                 </div>
             </div>
             <div class="total">
-                <button class="btnComprar">Comprar</button>
+                <button class="submitBtn">Comprar</button>
             </div>
        </div>
         <footer class="pie">
             <div class="principal-pie">
                 <div class="columna">
-                  <h3>Contacto</h3>
-                  <ul>
-                      <li>Teléfono: 666 54 78 17</li>
-                      <li>Correo: mondongo.components@gmail.com</li>
-                  </ul>
+                    <button id="mostrar" class="submitBtn">Contacto</button>
+                    <dialog id="dialogo">
+                        <ul>
+                            <li>Teléfono: 666 54 78 17</li>
+                            <li>Correo: mondongo.components@gmail.com</li>
+                            <button class="submitBtn" id="cerrar">Cerrar</button>
+                        </ul>
+                    </dialog>
                 </div>
               <div class="columna">
                 <ul>

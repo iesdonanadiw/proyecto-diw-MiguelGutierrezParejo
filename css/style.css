@@ -39,6 +39,10 @@ nav a {
     text-decoration: none;
 }
 
+nav a:hover {
+    color: black;
+}
+
 .menu-toggle {
     display: none;
     font-size: 24px;
@@ -52,17 +56,35 @@ nav a {
 .user-carrito {
     width: 70px;
     height: 70px;
+    animation: fade-in 1.5s ease-in-out;
+}
+
+.user-carrito:hover {
+    width: 100px;
+    height: 100px;
 }
 
 /*Estilo del logo*/
 .logo {
     box-sizing: border-box;
-    width: 90px;
-    height: 80px;
-    left: 32px;
-    top: 41px;
-    border: 1px solid #000000;
-    border-radius: 49px;
+    width: 190px;
+    height: 180px;
+    padding-top: 30px;
+    animation: fade-in 1.5s ease-in-out;
+}
+
+@keyframes fade-in{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.logo:hover {
+    width: 200px;
+    height: 200px;
 }
 
 /*Por si hay que poner algo morado*/
@@ -114,6 +136,30 @@ footer {
 .column a {
     color: #fff;
     text-decoration: none;
+}
+
+.submitBtn {
+    display: block;
+    margin-left: auto;
+    padding: 15px 30px;
+    border: none;
+    background-color: #A72DF0;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 30px;
+}
+
+.submitBtn:hover {
+    background-color: #d58cff;
+    transform: translateY(-2px);
+}
+
+#dialogo {
+    border: none;
+    border-radius: 10px;
+    text-align: center;
 }
 
 @media only screen and (max-width: 768px) {

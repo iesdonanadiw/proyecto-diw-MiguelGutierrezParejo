@@ -43,10 +43,16 @@
     height: 200px;
     width: 300px;
 }
+.producto:hover {
+    filter: grayscale();
+}
 
 .reloj {
     height: 200px;
     width: 130px;
+}
+.reloj:hover {
+    filter: grayscale();
 }
 
 /*El color para las estrellas de las valoraciones*/
